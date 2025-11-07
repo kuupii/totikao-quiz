@@ -1,0 +1,168 @@
+/* ================================
+   土地家屋調査士クイズアプリ Ver.3.2
+   - 可読性重視・左寄せ文章
+   - 統一カラー: #0070A8（ベース）
+================================= */
+
+body {
+  font-family: "Hiragino Sans", "Meiryo", sans-serif;
+  background: #f7f9fc;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* メインカード */
+main {
+  background: #fff;
+  margin-top: 40px;
+  padding: 30px 25px 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  max-width: 480px;
+}
+
+/* 問題エリア */
+#question-area {
+  text-align: left;
+}
+
+#question-number {
+  font-weight: bold;
+  color: #0070A8;
+  margin-bottom: 10px;
+}
+
+#question-text {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: left;
+}
+
+/* 選択肢・ボタン */
+#choices, #controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.choice,
+#unknown-btn,
+#next-btn,
+#copy-btn {
+  font-size: 1.1em;
+  padding: 10px 25px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0070A8;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.choice:hover,
+#unknown-btn:hover,
+#next-btn:hover,
+#copy-btn:hover {
+  background-color: #005F8A;
+}
+
+/* 結果表示 */
+#result {
+  font-size: 1.2em;
+  margin-top: 20px;
+  height: 1.5em;
+  text-align: center;
+}
+
+/* 進捗情報 */
+#progress-info {
+  margin-top: 25px;
+  font-weight: bold;
+  text-align: right;
+  color: #444;
+}
+
+/* 汎用 */
+.hidden {
+  display: none;
+}
+
+/* スマホ最適化 */
+@media (max-width: 480px) {
+  main {
+    margin-top: 20px;
+    padding: 20px 15px 40px;
+  }
+  .choice,
+  #unknown-btn,
+  #next-btn,
+  #copy-btn {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 4px;
+  }
+  #question-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+}
+/* ---- 表紙ページ ---- */
+.title-page {
+  text-align: center;
+  margin-top: 25vh;
+  background: #f7f9fc;
+  color: #222;
+}
+
+.title-page h1 {
+  font-size: 1.8em;
+  color: #0070A8;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 40px;
+}
+
+#start-btn {
+  font-size: 1.2em;
+  background: #0070A8;
+  color: white;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#start-btn:hover {
+  background: #005F8A;
+}
+
+footer {
+  margin-top: 60px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #0070A8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
