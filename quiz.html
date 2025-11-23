@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C34PHRSJN4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C34PHRSJN4');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>土地家屋調査士クイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div id="timer-bar" class="hidden">
+      残り時間: <span id="timer-display">05:00</span>
+    </div>
+
+    <div id="quiz-container">
+      <div id="question-area">
+        <div id="question-number"></div>
+        <div id="question-text"></div>
+      </div>
+
+      <div id="choices">
+        <button class="choice" data-choice="◯">◯</button>
+        <button class="choice" data-choice="✕">✕</button>
+        <button id="unknown-btn">？</button>
+      </div>
+
+      <div id="result"></div>
+
+      <div id="controls">
+        <button id="next-btn" class="hidden">次の問題へ</button>
+        <button id="copy-btn">間違えた問題をコピー</button>
+        <button id="home-btn">トップに戻る</button>
+      </div>
+    </div>
+
+    <div id="final-result-area" class="hidden">
+      <h2 class="ta-title">タイムアップ！</h2>
+      <div class="result-stats">
+        <div class="stat-box">
+          <span class="stat-label">正解</span>
+          <span class="stat-value" id="score-correct">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">誤答</span>
+          <span class="stat-value" id="score-wrong">0</span>
+        </div>
+      </div>
+      
+      <div id="ta-controls">
+        <button id="copy-ta-wrong-btn" class="control-btn blue-btn">間違えた問題をコピー</button>
+        <button id="share-x-btn" class="control-btn black-btn">𝕏 で成績を共有</button>
+        <button id="ta-home-btn" class="control-btn gray-btn">トップに戻る</button>
+      </div>
+    </div>
+
+    <div id="progress-info"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
